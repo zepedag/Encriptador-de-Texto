@@ -180,6 +180,30 @@
     text-align: center; 
 }
 
+.mensaje-copiado {
+    position: fixed;
+    top: 20px; /* 20px desde el tope */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centrar */
+    border: #000000 2px solid;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    color: var(--colorTerciario);
+    padding: 5px;
+    border-radius: 5px;
+    font-family: var(--fuenteRaleway);
+    font-size: 1rem;
+    opacity: 0.2;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.mensaje-copiado.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
 @media screen and (max-width: 768px) {
     .header {
         padding: 2% 0% 0% 5%;

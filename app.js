@@ -71,20 +71,16 @@ function mostrarTextoDesencriptado() {
 // Función para copiar el texto encriptado al portapapeles
 function copiarTexto() {
     let textoResultado = document.querySelector('.presentacionTextoResultado').textContent;
-    
-    // Crea un elemento de texto temporal
-    let temporal = document.createElement('textarea');
-    temporal.value = textoResultado;
-    document.body.appendChild(temporal);
-    
-    // Selecciona y copia el contenido al portapapeles
-    temporal.select();
-    document.execCommand('copy');
-    
-    // Elimina el elemento temporal
-    document.body.removeChild(temporal);
-    
-    alert("Texto copiado al portapapeles");
+    navigator.clipboard.writeText(textoResultado).then(() => {
+        let mensajeCopiado = document.getElementById('mensajeCopiado');
+        mensajeCopiado.classList.add('visible');
+        
+        setTimeout(() => {
+            mensajeCopiado.classList.remove('visible');
+        }, 2000); // El mensaje desaparecerá después de 2 segundos
+    }).catch(err => {
+        console.error('Error al copiar el texto: ', err);
+    });
 }
 
 document.querySelector('.presentacionEscribirAqui').addEventListener('input', function() {
