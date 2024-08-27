@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" );
+
+:root {
+    --colorPrimario: #C9DBBA;
+    --colorSecundario: #FFFFFF;
+    --colorTerciario: #000000;
+    --colorHover: #44633F;
+    --fontColor: #1B2D2A;
+
+
+  --fuenteRaleway: 'Raleway', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header 
+{
+    display: flex;
+    font-family: var(--fuenteRaleway);
+    color: var(--fontColor);
+    width: 100%;
+    height: 100%;
+    margin: 1% 1% 1% 1%;
+    padding: 4% 0% 0% 5%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.presentacion {
+    display: flex;
+    height: 85vh;
+    background-color: var(--colorPrimario);
+}
+
+.presentacionladoIzquierdo {
+    flex: 4; /* 60% */
+    padding: 5%;
+}
+
+.presentacionEscribirAqui {
+    width: 100%;
+    height: 90%;
+    padding-left: 10%;
+    padding-top: 10%;
+    font-size: 2rem;
+    background-color: var(--colorSecundario);
+    color: #000000;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.presentacionEscribirAqui::placeholder {
+    color: black; /* Cambia 'red' por el color que prefieras */
+}
+
+
+.presentacionBotones {
+    margin-top: 40px;
+    padding-left: 10%;
+    display: flex;
+    gap: 80px;
+    
+}
+
+.presentacionBotonesTexto {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-family: var(--fuenteRaleway);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--colorTerciario);
+    text-decoration: none;
+    border-radius: 5px;
+  
+}
+
+.presentacionBotonesTexto:hover
+{
+    background-color: var(--colorHover);
+    border-color: var(--colorSecundario);
+    cursor : pointer;
+}
+
+.presentacionAdvertencia
+{
+    font-family: var(--fuenteRaleway);
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--colorHover);
+}
+
+.presentacionSimboloChico
+{
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+.presentacionladoDerecho {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    font-family: var(--fuenteRaleway);
+    margin-bottom: 5%;
+    margin-right: 5%;
+    align-items: center;  /* Centrar horizontalmente */
+    justify-content: center;  /* Centrar verticalmente */
+    flex: 1;
+    padding: 5%;
+    height: 70%;
+    color: var(--colorTerciario);
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+    background-color: var(--colorPrimario);
+    gap: 20px;
+}
+
+.presentacionTextoVacio {
+    font-family: var(--fuenteRaleway);
+    font-size: 2rem;  /* Ajuste del tamaño de fuente */
+    text-align: center;
+}
+
+.presentacionTextoChico {
+    font-size: 1rem;  /* Ajuste del tamaño de fuente */
+    text-align: center;
+} 
+
+.presentacionTextoResultado {
+    font-size: 1.5rem;
+    width: 50%;  /* Ocupar todo el ancho del contenedor */
+    height: 90%;
+    margin-right: 10%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.presentacionImagenNothing {
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+}
+
+.presentacionCopiar
+{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.presentacionBotonCopiar {
+    padding: 10px 20px;
+    font-family: var(--fuenteRaleway);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--colorTerciario);
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: var(--colorSecundario);
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.footer
+{
+    font-family: var(--fuenteRaleway);    
+    background-color: var(--colorSecundario);
+    padding: 1.5rem;
+    color: var(--fontColor);
+    text-align: center; 
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 2% 0% 0% 5%;
+        height: 12vh;
+    }
+
+    .presentacion {
+        flex-direction: column;  /* Cambia a una disposición en columna */
+        height: auto;
+    }
+
+    .presentacionladoIzquierdo,
+    .presentacionladoDerecho {
+        flex: 1;
+        width: 100%;  /* Ocupar todo el ancho */
+        padding: 2%;
+    }
+
+    .presentacionladoIzquierdo {
+        padding: 2%;
+        order: 2;  /* Mueve la sección izquierda abajo */
+    }
+
+    .presentacionEscribirAqui {
+        font-size: 1.5rem;
+        padding: 5%;
+    }
+
+    .presentacionBotones {
+        gap: 20px;
+        padding-left: 5%;
+        margin-top: 20px;
+        justify-content: center;  /* Centrar los botones */
+    }
+
+    .presentacionladoDerecho {
+        margin: 0;
+        height: auto;
+        padding: 2%;
+        order: 1;  /* Mueve la sección derecha arriba */
+    }
+
+    .presentacionTextoVacio,
+    .presentacionTextoResultado {
+        font-size: 1.5rem;
+    }
+
+    .presentacionTextoChico {
+        font-size: 0.8rem;
+    }
+
+    .presentacionImagenNothing {
+        width: 80%;
+        height: auto;
+    }
+
+    .presentacionBotonCopiar {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .footer {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: 3% 0% 0% 5%;
+        height: 10vh;
+    }
+
+    .presentacionladoIzquierdo,
+    .presentacionladoDerecho {
+        padding: 3%;
+    }
+
+    .presentacionEscribirAqui {
+        font-size: 1.75rem;
+        padding: 8%;
+    }
+
+    .presentacionBotones {
+        gap: 40px;
+        padding-left: 5%;
+        margin-top: 30px;
+    }
+
+    .presentacionTextoVacio,
+    .presentacionTextoResultado {
+        font-size: 1.75rem;
+    }
+
+    .presentacionTextoChico {
+        font-size: 0.9rem;
+    }
+
+    .presentacionImagenNothing {
+        width: 75%;
+        height: auto;
+    }
+
+    .presentacionBotonCopiar {
+        font-size: 0.95rem;
+        padding: 8px 18px;
+    }
+
+    .footer {
+        padding: 1.2rem;
+    }
+}

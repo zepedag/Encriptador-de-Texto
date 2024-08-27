@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Encriptador de texto</h1>
+    </header>
+    <main class="presentacion">
+        <section class="presentacionladoIzquierdo">
+            <textarea aria-setsize="" class="presentacionEscribirAqui" placeholder="Escribe aquí..." rows="10"></textarea>
+            <div class="presentacionBotones">
+                <button class="presentacionBotonesTexto" type="button" onclick="mostrarTextoEncriptado()">Encriptar</button>
+                <button class="presentacionBotonesTexto" type="button" onclick="mostrarTextoDesencriptado()">Desencriptar</button>
+                <div class="presentacionAdvertencia">
+                    <p class="advertenciaTexto">Solo minúsculas y sin acentos.</p>
+                    <img src="./assets/warning.png" class="presentacionSimboloChico">
+                </div>
+            </div>
+        </section>
+        <section class="presentacionladoDerecho">
+            <strong class="presentacionTextoVacio">Ningún mensaje encontrado</strong>
+            <p class="presentacionTextoChico">Aún no has escrito nada, escribe algo para empezar.</p>
+            <p class="presentacionTextoResultado"></p>
+            <img src="./assets/nothingfound.png" class="presentacionImagenNothing">
+            <div class="presentacionCopiar">
+                <button class="presentacionBotonCopiar"  onclick="copiarTexto()">Copiar texto</button>
+                <img src="./assets/copy.png" class="presentacionSimboloChico">
+            </div>
+        </section>
+    </main>
+    <footer class = "footer">
+        <p>Desarrollado por Alejandro Zepeda</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
